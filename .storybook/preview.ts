@@ -3,7 +3,6 @@ import type { Preview } from '@storybook/react';
 import { withThemeByDataAttribute } from '@storybook/addon-styling';
 
 /* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
-// import '../src/index.css';
 import '../src/styles/globals.css';
 
 export const preview: Preview = {
