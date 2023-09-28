@@ -5,7 +5,16 @@ const config: Config = {
   // Toggle dark-mode based on data-mode="dark"
   darkMode: ['class', '[data-mode="dark"]'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'netflix-red-primary': '#E50814',
+        'netflix-red-secondary': '#B9080A',
+        'netflix-black-primary': '#141414',
+        'netflix-grey-primary': '#595959',
+        'netflix-grey-secondary': '#808080',
+        'netflix-dark-tranparent-primary': 'rgba(0,0,0,0.5)',
+      },
+    },
   },
   plugins: [],
 };
