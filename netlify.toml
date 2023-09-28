@@ -1,0 +1,14 @@
+[build]
+  command = "yarn build" # Replace with your build command
+  publish = "next"          # Replace with your build output directory
+
+[context.production.environment]
+  NEXT_PUBLIC_API_KEY = "your-api-key" # Add environment variables
+  NEXT_PUBLIC_API_KEY='739c462304a0ae5cc4c8953e1a6c89f8'
+  NEXT_PUBLIC_TOKEN='eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3MzljNDYyMzA0YTBhZTVjYzRjODk1M2UxYTZjODlmOCIsInN1YiI6IjVlMzkzZmZlYWM4ZTZiMDAxYWM3ZTgyMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ChXU6jp6W6vzPM-9M5u_G52NvreWwt9mv972GF-a338'
+  NEXT_PUBLIC_BASE_URL_API='https://api.themoviedb.org/3'
+
+
+
+[context.deploy-preview]
+  command = "yarn build" # Build command for deploy previews
