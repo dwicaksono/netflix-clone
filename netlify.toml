@@ -1,6 +1,6 @@
 [build]
   command = "yarn build" # Replace with your build command
-  publish = "next"          # Replace with your build output directory
+  publish = ".next"          # Replace with your build output directory
 
 [context.production.environment]
   NEXT_PUBLIC_API_KEY = "your-api-key" # Add environment variables
