@@ -18,8 +18,8 @@ const MovieItemCard = ({ video }: { video: any }) => {
     <div className="pr-2 cursor-pointer" ref={elementRef}>
       <div
         className="overflow-hidden rounded-lg"
-        onPointerEnter={() => setIsHovered(true)}
-        onPointerLeave={() => setIsHovered(false)}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
         <img
           src={basePathThumb500 + video?.backdrop_path}

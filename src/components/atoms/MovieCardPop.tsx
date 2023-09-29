@@ -64,7 +64,7 @@ const MovieCardPop = () => {
     !!miniModalMediaData && (
       <Portal>
         <div
-          onPointerLeave={() => setPortal(null, null)}
+          onMouseLeave={() => setPortal(null, null)}
           className={`bg-netflix-black-primary overflow-hidden rounded-lg text-white h-max z-20 cursor-pointer flex flex-col absolute drop-shadow-3xl`}
           style={{
             ...(rect && {
