@@ -32,8 +32,6 @@ body {
     'sans-serif';
   -webkit-font-smoothing: antialiased;
   -webkit-font-smoothing: grayscale;
-  user-select: none;
-  touch-action: manipulation;
 }
 
 code {

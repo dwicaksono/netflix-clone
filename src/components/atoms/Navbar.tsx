@@ -32,7 +32,7 @@ const Navbar: FC = () => {
           alt="logo"
         />
 
-        <ul className="flex gap-4">
+        <ul className="lg:flex gap-4 hidden">
           {listMenu?.map(val => (
             <li
               key={val}
@@ -42,6 +42,9 @@ const Navbar: FC = () => {
             </li>
           ))}
         </ul>
+        <p className="lg:hidden flex text-netflix-red-primary font-bold">
+          Browser
+        </p>
       </div>
       <div className="lg:right-14 right-10 top-4 fixed flex items-center gap-5">
         <span className="cursor-pointer">

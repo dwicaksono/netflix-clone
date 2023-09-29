@@ -15,7 +15,10 @@ const MovieItemCard = ({ video }: { video: any }) => {
     }
   }, [isHovered]);
   return (
-    <div className="pr-2 cursor-pointer" ref={elementRef}>
+    <div
+      className="pr-2 cursor-pointer touch-manipulation select-none"
+      ref={elementRef}
+    >
       <div
         className="overflow-hidden rounded-lg"
         onMouseEnter={() => setIsHovered(true)}
