@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { basePathThumb500 } from '@/constant';
+import { useOutsideClick } from '@/hooks';
 import { useGetGenreMovies } from '@/lib/fetcherHook';
 import { usePortal, usePortalData } from '@/lib/providers/PortalProvider';
 import { useRef, useState } from 'react';
@@ -13,7 +14,7 @@ import Portal from '../Portal';
 
 const MovieCardPop = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-
+  const cardRef = useRef<HTMLDivElement | null>(null);
   const { data: genres } = useGetGenreMovies();
   const { miniModalMediaData, anchorElement } = usePortalData();
   const setPortal = usePortal();
@@ -26,7 +27,6 @@ const MovieCardPop = () => {
   const hasToRender = !!miniModalMediaData && !!anchorElement;
   let isFirstElement: boolean = false;
   let isLastElement: boolean = false;
-  // let variant = varZoomIn;
   if (hasToRender) {
     const parentElement = anchorElement.closest('.slick-active');
     const nextSiblingOfParentElement = parentElement?.nextElementSibling;
@@ -34,12 +34,10 @@ const MovieCardPop = () => {
       parentElement?.previousElementSibling;
     if (!previousSiblingOfParentElement?.classList.contains('slick-active')) {
       isFirstElement = true;
-      // variant = varZoomInLeft;
     } else if (
       !nextSiblingOfParentElement?.classList.contains('slick-active')
     ) {
       isLastElement = true;
-      // variant = varZoomInRight;
     }
   }
 
@@ -58,12 +56,15 @@ const MovieCardPop = () => {
   const muteHandler = () => {
     setIsMuted(prev => !prev);
   };
-
+  useOutsideClick(cardRef, () => {
+    setPortal(null, null);
+  });
   return (
     !!anchorElement &&
     !!miniModalMediaData && (
       <Portal>
         <div
+          ref={cardRef}
           onMouseLeave={() => setPortal(null, null)}
           className={`bg-netflix-black-primary overflow-hidden rounded-lg text-white h-max z-20 cursor-pointer flex flex-col absolute drop-shadow-3xl`}
           style={{
