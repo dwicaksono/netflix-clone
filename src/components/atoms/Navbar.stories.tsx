@@ -1,7 +1,9 @@
-import Navbar from './Navbar';
+import { Meta } from '@storybook/react';
+import Navbar from './Navbar'; // Import your Button component
 
 export default {
-  title: 'Components/Navbar',
+  title: 'components/Navbar',
   component: Navbar,
-};
-export const Default = () => <Navbar />;
+} as Meta;
+
+export const Default = {};

@@ -1,7 +1,14 @@
-import Button from './Button';
+import { Meta } from '@storybook/react';
+import Button from './Button'; // Import your Button component
 
 export default {
-  title: 'Components/Button',
+  title: 'components/Button',
   component: Button,
+} as Meta;
+
+export const Primary = {
+  args: {
+    label: 'Primary Button',
+    title: 'button',
+  },
 };
-export const Default = () => <Button title="Submit" />;

@@ -5,7 +5,7 @@ import Slider, { Settings } from 'react-slick';
 import { TitleSlide } from '.';
 import ArrowNavigation from './ArrowNavigation';
 
-const SliderMovies = ({ data, title }: { data: any; title: string }) => {
+const SliderMovies = ({ data, title }: { data: any[]; title: string }) => {
   const sliderRef = useRef<Slider>(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const [isEnd, setIsEnd] = useState(false);
