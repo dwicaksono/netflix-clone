@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Portal from '@/components/Portal';
 import { basePathThumb500 } from '@/constant';
 import { useOutsideClick } from '@/hooks';
 import { useGetGenreMovies } from '@/lib/fetcherHook';
@@ -10,7 +11,6 @@ import { BsHandThumbsDown, BsHandThumbsUp } from 'react-icons/bs';
 import { FaPause, FaPlay } from 'react-icons/fa6';
 import { FiChevronDown } from 'react-icons/fi';
 import { GenreBreadCrumbs } from '.';
-import Portal from '../Portal';
 
 const MovieCardPop = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);

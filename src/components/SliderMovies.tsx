@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import MovieItemCard from '@/components/atoms/MovieItemCard';
+import MovieItemCard from '@/components/MovieItemCard';
 import { useRef, useState } from 'react';
 import Slider, { Settings } from 'react-slick';
 import { TitleSlide } from '.';

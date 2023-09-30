@@ -1,4 +1,4 @@
-import { Footer, Navbar, SliderMovies } from '@/components/atoms';
+import { Footer, Navbar, SliderMovies } from '@/components';
 import {
   useGetActionMovies,
   useGetComedyMovies,
@@ -9,7 +9,7 @@ import {
 import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google';
 
-const BannerDynamic = dynamic(() => import('@/components/atoms/Banner'), {
+const BannerDynamic = dynamic(() => import('@/components/Banner'), {
   ssr: false,
 });
 

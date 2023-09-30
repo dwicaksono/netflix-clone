@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Input } from '@/components/atoms';
+import { Input } from '@/components';
 import { Inter } from 'next/font/google';
 import { useRouter } from 'next/router';
 import { useState } from 'react';

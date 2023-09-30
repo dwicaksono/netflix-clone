@@ -1,4 +1,4 @@
-import { MovieCardPop } from '@/components/atoms';
+import { MovieCardPop } from '@/components';
 import QueryClientProviderConfig from '@/lib/QueryClientProviderConfig';
 import PortalProvider from '@/lib/providers/PortalProvider';
 import '@/styles/globals.css';
